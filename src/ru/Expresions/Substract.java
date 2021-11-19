@@ -8,15 +8,19 @@ public class Substract implements Expresion{
 
     Substract(Expresion leftChild, Expresion rightChild){
         childs = new ArrayList<>();
-        childs.add(0, leftChild);
+        if (Variable.class.isInstance(leftChild)&&leftChild.getName().equals("")){
+            childs.add(0, new Constant(0.0));
+        } else {
+            childs.add(0, leftChild);
+        }
         childs.add(1, rightChild);
     }
 
     Substract(List<Expresion> expresionList){
+        this(expresionList.get(0), expresionList.get(1));
         if (expresionList.size()!=2){
             //TODO: trow
         }
-        childs = expresionList;
     }
 
     @Override
