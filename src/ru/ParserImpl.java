@@ -60,7 +60,7 @@ public class ParserImpl implements Parser {
     public String test(String str) {
         StringTree stringTree = new StringTree(str, new Pair(0, str.length() - 1));
         ExpresionFactory.variableServise.SetValue("a", 2.0);
-        Expresion expresion = createExpresionsTree(new StringTree("(9-9)/3*(-1.5)+(2------1)", null));
+        Expresion expresion = createExpresionsTree(new StringTree("2/4*3-2*3/4+2^3", null));
         return expresion.execute().toString();
     }
 

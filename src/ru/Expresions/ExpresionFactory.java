@@ -23,6 +23,9 @@ public class ExpresionFactory {
             case "/":{
                 return new Division(expresionList);
             }
+            case "^":{
+                return new Exponent(expresionList);
+            }
             default:{
                 try {
                     return new Constant(Double.parseDouble(exp));
@@ -34,6 +37,6 @@ public class ExpresionFactory {
     }
 
     public static List<String> getListOfPriority(){
-        return Arrays.asList("+", "-", "*", "/");
+        return Arrays.asList("+", "-", "*", "/", "^");
     }
 }
