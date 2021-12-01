@@ -6,7 +6,7 @@ import java.util.List;
 public class Plus implements Expresion{
     private List<Expresion> childs;
 
-    Plus(Expresion leftChild, Expresion rightChild){
+    public Plus(Expresion leftChild, Expresion rightChild){
         childs = new ArrayList<>();
         childs.add(0, leftChild);
         childs.add(1, rightChild);
