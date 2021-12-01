@@ -31,4 +31,13 @@ public class ExpresionOrString{
         if (isExpresion) return - 1;
         return string.indexOf(command);
     }
+
+    @Override
+    public String toString() {
+        if (isExpresion){
+            return "["+expresion.toString()+"]";
+        } else {
+            return string;
+        }
+    }
 }

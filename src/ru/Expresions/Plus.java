@@ -33,4 +33,9 @@ public class Plus implements Expresion{
     public String getName() {
         return null;
     }
+
+    @Override
+    public String toString() {
+        return childs.get(0).toString()+"+"+childs.get(1).toString();
+    }
 }

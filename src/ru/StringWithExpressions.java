@@ -73,7 +73,7 @@ public class StringWithExpressions {
     @Override
     public String toString() {
         return "StringWithExpressions{" +
-                list.stream().map(expresionOrString -> expresionOrString.getString()).collect(Collectors.joining()) +
+                list.stream().map(expresionOrString -> expresionOrString.toString()).collect(Collectors.joining()) +
                 '}';
     }
 }
