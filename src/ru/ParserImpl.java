@@ -58,9 +58,7 @@ public class ParserImpl implements Parser {
     ;
 
     public String test(String str) {
-        StringTree stringTree = new StringTree(str, new Pair(0, str.length() - 1));
-        ExpresionFactory.variableServise.SetValue("a", 2.0);
-        Expresion expresion = createExpresionsTree(new StringTree("3*(-1)+(2/3*6-(a+2*6/3))", null));
+        Expresion expresion = createExpresionsTree(new StringTree(str, null));
         return expresion.execute().toString();
     }
 
