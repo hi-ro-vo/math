@@ -13,8 +13,8 @@ public class ParserImpl implements Parser {
     @Override
     public Expresion parse(String str) {
         StringTree stringTree = new StringTree(str.replaceAll("\\s",""), null);
-
-        return new Constant(12.0);
+        Expresion expresion = createExpresionsTree(stringTree);
+        return expresion;
     }
 
     private Expresion createExpresionsTree(StringTree tree) {
